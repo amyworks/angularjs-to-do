@@ -1,0 +1,117 @@
+body {
+	background: url('notebook.jpg') no-repeat center center fixed;
+	background-size:cover;
+	font-size:1em;
+	line-height:1;
+}
+
+section {
+	margin:5%;
+	color:#444;
+	padding:100px;
+}
+
+h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-size:2em;
+	text-align:center;
+	text-transform:uppercase;
+}
+
+hr {
+	border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin-bottom:40px;
+}
+
+ul {
+	list-style-type:none;
+	width:70%;
+	margin:0 auto 50px auto;
+	padding-left:5%;
+}
+
+li {
+	font-family: 'Dawning of a New Day', sans-serif;
+	font-size: 2em;
+	padding:15px 0;
+
+}
+
+li.completed p {
+	text-decoration:line-through;
+	color:#aaa;
+}
+
+li p {
+	display:inline-block;
+	width:80%;
+	margin:0;
+}
+
+li span {
+	vertical-align:middle;
+	line-height:1;
+}
+
+button {
+	color:#aaa;
+	border:none;
+	background:none;
+	vertical-align:top;
+	font-size:.5em;
+	padding:7px 0;
+}
+
+button.completed, button:hover {
+	color:#28c16d;
+}
+
+button.delete {
+	padding-left:20px;
+}
+
+button.delete:hover {
+	color:#e26161;
+}
+
+form {
+	width:70%;
+	margin:0 auto;
+	padding-left:5%;
+}
+
+input[type=text] {
+	margin-left:30px;
+	width:76.5%;
+	padding:10px;
+	background:transparent;
+	border:none;
+	border-bottom:2px solid #666;
+	font-family: 'Montserrat', sans-serif;
+	font-size:1.25em;
+	color:#666;
+}
+
+::placeholder {
+	color:#aaa;
+}
+
+::-webkit-input-placeholder {
+	color:#aaa;
+}
+
+::-moz-placeholder {
+	color:#aaa;
+}
+
+:-ms-input-placeholder {
+	color:#aaa;
+}
+
+button[type=submit] {
+	font-size:1em;
+	padding:20px;
+	margin-left:2.5%;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+	<html ng-app="to-do">
+		<head>
+			<title>AngularJS To-Do</title>
+			<link href="https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day|Montserrat" rel="stylesheet">
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+			<link href="style.css" rel="stylesheet">
+		</head>
+		 
+		<body ng-controller="ToDoController as todo">
+			<section>
+				<h1>My To-Do List</h1>
+				<hr>
+				<ul id="to-do-list">
+					<li ng-repeat="task in todo.tasks" ng-class="{ 'completed': task.completedTask == true }" ng-click="todo.completeTask($index)">						
+						<button ng-class="{ 'completed': task.completedTask == true }"><i class="fas fa-check"></i></button>
+						<p>{{ task.description }}</p>
+						<button class="delete" ng-click="todo.deleteTask($index)"><i class="fas fa-trash"></i></button>
+					</li>
+				</ul>
+
+				<form ng-submit="todo.createTask()">
+					<input placeholder="Create a new task" type="text" ng-model="todo.taskName">
+					<button type="submit"><i class="fas fa-plus"></i></button>
+				</form>
+
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+				<script src="app.js"></script>
+			</section>
+		</body>
+	 
+	</html>
